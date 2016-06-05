@@ -3,6 +3,10 @@
 ## Introduction
 This program is a variation of Langton's Ant, a type of 2-dimensional Turing machine, in which more states are present, allowing for more complex patterns. This was made with Java using Processing 3.
 
+## Examples
+### LR movement pattern (Langton's Ant)
+![LR movement pattern (Langton's Ant)](https://gyazo.com/f0dfc3fd0a25334f76cccebd0f57c8d5)
+
 ## Code
 ### Global variables
 `grid_length` is used to set the length of each grid square.  
