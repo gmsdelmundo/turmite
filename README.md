@@ -7,6 +7,18 @@ This program is a variation of Langton's Ant, a type of 2-dimensional Turing mac
 ### LR movement pattern (Langton's Ant)
 [![https://gyazo.com/f0dfc3fd0a25334f76cccebd0f57c8d5](https://i.gyazo.com/f0dfc3fd0a25334f76cccebd0f57c8d5.gif)](https://gyazo.com/f0dfc3fd0a25334f76cccebd0f57c8d5)
 
+### RLLR movement pattern
+[![https://gyazo.com/f4558c9b7d2a83e6d6ef2f3ce4e4ec66](https://i.gyazo.com/f4558c9b7d2a83e6d6ef2f3ce4e4ec66.gif)](https://gyazo.com/f4558c9b7d2a83e6d6ef2f3ce4e4ec66)
+
+### LLRR movement pattern
+[![https://gyazo.com/8213dfca2cc61f683091248ba8a65f25](https://i.gyazo.com/8213dfca2cc61f683091248ba8a65f25.gif)](https://gyazo.com/8213dfca2cc61f683091248ba8a65f25)
+
+### LRRRRRLLR movement pattern
+[![https://gyazo.com/3944fd4c8b44dea3a430ea6cf12a4136](https://i.gyazo.com/3944fd4c8b44dea3a430ea6cf12a4136.gif)](https://gyazo.com/3944fd4c8b44dea3a430ea6cf12a4136)
+
+### RRLLLRLLLRRR movement pattern
+[![https://gyazo.com/cad0703c1476afd6d38c4af7b5555072](https://i.gyazo.com/cad0703c1476afd6d38c4af7b5555072.gif)](https://gyazo.com/cad0703c1476afd6d38c4af7b5555072)
+
 ## Code
 ### Global variables
 `grid_length` is used to set the length of each grid square.  
@@ -26,4 +38,4 @@ Both the `movement` and `grid_color` arrays are instantiated in this function.
 `draw()` is a function that will, by default, automatically loop after the last line. This is also the function used to move the turmite depending on the movement pattern.
 
 ## Further Improvements and Modifications
-One improvement would be to fix the problem with the counting of steps since it is double counted when moving to a black tile.
+One improvement would be to fix the problem with the counting of steps since it is double counted when moving to a black tile. Another improvement would be to add more keyboard functionality, such as pressing R to restart.
