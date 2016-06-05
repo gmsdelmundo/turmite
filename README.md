@@ -5,7 +5,7 @@ This program is a variation of Langton's Ant, a type of 2-dimensional Turing mac
 
 ## Examples
 ### LR movement pattern (Langton's Ant)
-![LR movement pattern (Langton's Ant)](https://gyazo.com/f0dfc3fd0a25334f76cccebd0f57c8d5)
+[![https://gyazo.com/f0dfc3fd0a25334f76cccebd0f57c8d5](https://i.gyazo.com/f0dfc3fd0a25334f76cccebd0f57c8d5.gif)](https://gyazo.com/f0dfc3fd0a25334f76cccebd0f57c8d5)
 
 ## Code
 ### Global variables
