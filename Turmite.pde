@@ -12,8 +12,8 @@ color[] grid_color;        //Array storing all the corresponding colors for the 
 int movement[] = {0, 1};   //Array storing the movement pattern where 0 = left, 1 = right
 int num_of_moves = movement.length;  //Set number of moves in the movement pattern
 int dir = 3;               //Check the direction of the turmite where 0 = North, 1 = East, 2 = South, 3 = West
-int dps = 120;               //Number of times draw() is looped during one frame
-int fps = 1;             //Frame rate
+int dps = 10;              //Number of times draw() is looped during one frame
+int fps = 120;             //Frame rate
 int step = 0;              //Number of steps taken by the turmite
 
 void setup()         //Function that runs before drawing anything
