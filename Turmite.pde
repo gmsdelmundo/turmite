@@ -23,10 +23,11 @@ void setup()         //Function that runs before drawing anything
 
   String s = ""+javax.swing.JOptionPane.showInputDialog("Input movement pattern - 1 for right, 0 for left (e.g. 1 0 0 1)");
   String[] result = s.split(" ");
-  for (int k = 0; k < result.length; k++) {
+  for (int k = 0; k < result.length; k++) 
+  {
     movement.add(Integer.parseInt(result[k]));
   }
-  
+
   num_of_moves = movement.size();
 
   grid_color = new color[num_of_moves];  //Instantiate the array
@@ -65,75 +66,79 @@ void draw() //Begin drawing
     for (int i = 0; i < num_of_moves; i++)
     {
       if (temp == grid_color[i])  //To find the index to use for movement[]
-        {
+      {
         int j = i;
-      j++;
-      if (j >= num_of_moves)
-      {
-        j = 0;
-      }
-
-      fill(grid_color[j]); //Change the color of the current rectangle
-      rectMode(CENTER);    //Coordinates of any rectangle is measured using its center
-      rect(x, y, grid_length, grid_length); //Draw a rectangle
-
-      if (movement.get(i) == 0)  //Turn left
-      {
-        switch(dir)
+        j++;
+        if (j >= num_of_moves)
         {
-        case 0:  //If pointing North, turn West and move forward
-          x -= grid_length;
-          dir = 3;
-          break;
-
-        case 1:  //If pointing East, turn North and move forward
-          y -= grid_length;
-          dir = 0;
-          break;
-
-        case 2:  //If pointing South, turn East and move forward
-          x += grid_length;
-          dir = 1;
-          break;
-
-        case 3:  //If pointing West, turn South and move forward
-          y += grid_length;
-          dir = 2;
-          break;
+          j = 0;
         }
-      } else if (movement.get(i) == 1)  //Turn right
-      {
-        switch(dir)
+
+        fill(grid_color[j]); //Change the color of the current rectangle
+        rectMode(CENTER);    //Coordinates of any rectangle is measured using its center
+        rect(x, y, grid_length, grid_length); //Draw a rectangle
+
+        if (movement.get(i) == 0)  //Turn left
         {
-        case 0:  //If inting North, turn East and move forward
-          x += grid_length;
-          dir = 1;
-          break;
-
-        case 1:  //If pointing East, turn South and move forward
-          y += grid_length;
-          dir = 2;
-          break;
-
-        case 2:  //If pointing South, turn West and move forward
-          x -= grid_length;
-          dir = 3;
-          break;
-
-        case 3:  //If pointing West, turn North and move forward
-          y -= grid_length;
-          dir = 0;
-          break;
+          switch(dir)
+          {
+          case 0:  //If pointing North, turn West and move forward
+            x -= grid_length;
+            dir = 3;
+            break;
+  
+          case 1:  //If pointing East, turn North and move forward
+            y -= grid_length;
+            dir = 0;
+            break;
+  
+          case 2:  //If pointing South, turn East and move forward
+            x += grid_length;
+            dir = 1;
+            break;
+  
+          case 3:  //If pointing West, turn South and move forward
+            y += grid_length;
+            dir = 2;
+            break;
+          }
+        } 
+        
+        else if (movement.get(i) == 1)  //Turn right
+        {
+          switch(dir)
+          {
+          case 0:  //If inting North, turn East and move forward
+            x += grid_length;
+            dir = 1;
+            break;
+  
+          case 1:  //If pointing East, turn South and move forward
+            y += grid_length;
+            dir = 2;
+            break;
+  
+          case 2:  //If pointing South, turn West and move forward
+            x -= grid_length;
+            dir = 3;
+            break;
+  
+          case 3:  //If pointing West, turn North and move forward
+            y -= grid_length;
+            dir = 0;
+            break;
+          }
         }
+      } 
+    
+      else if (temp == color(0, 0, 0))
+      {
+        fill(grid_color[0]); //Change the color of the current rectangle
+        rectMode(CENTER);    //Coordinates of any rectangle is measured using its center
+        rect(x, y, grid_length, grid_length); //Draw a rectangle
       }
-    } else if (temp == color(0, 0, 0))
-    {
-      fill(grid_color[0]); //Change the color of the current rectangle
-      rectMode(CENTER);    //Coordinates of any rectangle is measured using its center
-      rect(x, y, grid_length, grid_length); //Draw a rectangle
     }
-  }
 
-  step++;  //Increment step of the turmite by 1
-}
+    step++;  //Increment step of the turmite by 1
+  }
 }
